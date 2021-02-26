@@ -3,6 +3,7 @@
 <head>
 </head>
 <body>
+    <img id="blob" src = "blob.png"  alt= "Image failed to load" style="display:none">
   <canvas id = "game"></canvas>
 <script>
   var Key = {
@@ -65,9 +66,8 @@
       goalX = Math.random() * canvas.width;
       goalY = Math.random() * canvas.height;
     }
-    var character = new Path2D();
-    character.arc(x, y, playerSize, 0, 2 * Math.PI)
     
+    var character = document.getElementById("blob");
     var goal = new Path2D();
     goal.arc(goalX, goalY, goalSize, 0, 2 * Math.PI)
     
